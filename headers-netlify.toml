@@ -1,0 +1,27 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Content-Security-Policy = "default-src 'self' cdnjs.cloudflare.com fonts.googleapis.com fonts.gstatic.com *.github.io *.nirzak.tech api.github.com www.google-analytics.com data:"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=2592000"
+    Permissions-Policy = '''
+            accelerometer=(),
+            ambient-light-sensor=(),
+            autoplay=(),
+            camera=(),
+            encrypted-media=(),
+            fullscreen=(*),
+            geolocation=(),
+            gyroscope=(),
+            magnetometer=(),
+            microphone=(),
+            payment=(*),
+            picture-in-picture=(),
+            speaker=(),
+            usb=(),
+            vibrate=(),
+            vr=()
+        '''
